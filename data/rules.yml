@@ -12,20 +12,21 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: activate artist form
+- rule: Activate Artist Form
   steps:
-    - intent: ask_artists
-    - action: artist_form
-    - active_loop: artist_form
+  - intent: ask_artists
+  - action: artist_form
+  - active_loop: artist_form
 
-- rule: submit form
+- rule: Submit Artist Form
   condition:
-    - active_loop: artist_form
+  - active_loop: artist_form
   steps:
-    - action: artist_form
-    - active_loop: null
-    - slot_was_set:
-      - requested_slot: null
-    - action: utter_slot_values
+  - action: artist_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_submit
+  - action: utter_slot_values
 
 

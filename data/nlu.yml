@@ -94,27 +94,20 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-- intent: ask_art_styles
-  examples: |
-    - what are the art styles?
-    - what are the art styles you know?
-    - what are the drawing styles?
-    - do you know about drawing styles?
-    - what is the art style?
 - intent: ask_artists
   examples: |
     - Do you know any artists?
     - Do you know about painters?
     - How can I find a good artists?
-    - How to find a artist?
+    - How to find an artist?
     - Can you find me an artist?
-- intent: contact_artist
-  examples: |
-    - How can I contact this artist?
-    - How to contact him?
-    - How to contact her?
-    - Where can I find this artist?
-    - How can I reach them?
+    - I want to find an artist
+    - I want a to get done a drawing
+    - How can I get my portrait done?
+    - How to buy a drawing of me?
+    - I want to buy a drawing
+    - I want to buy an art
+    - how can i find an artist?
 - intent: inform
   examples: |
     - [digital](style) art
@@ -132,8 +125,13 @@ nlu:
     - [couple](figures) portrait
     - [family](figures) drawing
     - I want [digital](style) art
-    - [line](medium) art
     - [2](figures)
+    - I want a [digital](style) drawing
+    - [colored](medium) one
+    - [6](figures)
+    - [4](figures) figures then
+    - [3](figures) figures please
+    
 - intent: out_of_scope
   examples: |
     - nevermind
