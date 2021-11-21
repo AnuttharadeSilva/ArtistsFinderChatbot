@@ -37,6 +37,8 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - ok
+    - sure
 - intent: deny
   examples: |
     - no
@@ -46,6 +48,14 @@ nlu:
     - don't like that
     - no way
     - not really
+    - nope
+- intent: thank
+  examples: |
+    - thank you
+    - thanks
+    - tnx
+    - ok thanks
+    - Thanks
 - intent: mood_great
   examples: |
     - perfect
@@ -105,3 +115,33 @@ nlu:
     - How to contact her?
     - Where can I find this artist?
     - How can I reach them?
+- intent: inform
+  examples: |
+    - [digital](style) art
+    - [traditional](style) art
+    - I want a [cartoon](style) one
+    - [realistic](style) art
+    - I would like to get a [colored](medium) drawing
+    - [pencil](medium) art
+    - I need a [color pencil](medium) art
+    - [line](medium) art
+    - I want a [water color](medium) drawing
+    - [oil color](medium) art
+    - [one](figures) only
+    - [4](figures)
+    - [couple](figures) portrait
+    - [family](figures) drawing
+    - I want [digital](style) art
+    - [line](medium) art
+    - [2](figures)
+- intent: out_of_scope
+  examples: |
+    - nevermind
+    - wait stop
+    - That is not what I wanted
+    - tell me the weather
+    - I want a pizza
+    - stop asking
+    - I want to do something else
+    - you are no help
+    - how old are you
