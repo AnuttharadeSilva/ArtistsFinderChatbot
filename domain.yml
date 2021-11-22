@@ -31,40 +31,41 @@ slots:
   requested_slot:
     type: unfeaturized
     influence_conversation: false
+
 responses:
   utter_greet:
-  - text: Hey there! How can I help?
+  - text: ආයුබෝවන්! මොකක්ද මගෙන් ඔබට විය යුතු උදව්ව?
   utter_cheer_up:
-  - text: 'Here is something to cheer you up:'
+  - text: 'මෙන්න ඔබට මගෙන් තෑග්ගක්:'
     image: https://i.imgur.com/nGF1K8f.jpg
   utter_did_that_help:
-  - text: Did that help you?
+  - text: ඒක ඔයාට උදව්වක් උනාද?
   utter_happy:
-  - text: Great, carry on!
+  - text: නියමයි! දිගටම කරගෙන යන්න
   utter_goodbye:
-  - text: Bye
+  - text: සුබ දවසක්!
   utter_iamabot:
-  - text: I am a bot, powered by Rasa.
+  - text: මම RASA වලින් හදපු රොබෝ කෙනෙක්.
   utter_ask_artists:
-  - text: I know the best artists from all over the country who are doing commissions.
+  - text: මම දන්නවා ලංකාවේ ඉන්න හොදම චිත්‍ර ශිල්පියෝ. ඔයාට එයාලට කියල චිත්‍රයක් මිලදී ගන්න පුළුවන්.
   utter_ask_style:
-  - text: Can I know in which style do you want to get your drawing done? digital or traditional?
+  - text: මට දැනගන්න පුලුවන්ද ඔයාට අවශ්‍ය චිත්‍ර ශෛලිය මොකක්ද කියල?
   utter_ask_medium:
-  - text: What is the medium of the drawing you are looking for? colored or pencil art?
+  - text: ඔයාට චිත්‍රය ඇදගන්න ඕනේ කරන මාධ්‍ය මොකක්ද? 
   utter_ask_figures:
-  - text: How many figures do you need to be done?
+  - text: ඔයාගේ චිත්‍රයේ මිනිස් රූප කීයක් තිබිය යුතුද?
   utter_no_worries:
-  - text: No problem :)
+  - text: ඕක මොකක්ද :)
   utter_ask_continue:
-  - text: Sorry, I didn't understand. Do you want to continue?
+  - text: සමාවෙන්න. මට ඒක තේරුනේ නෑ. නැවත ආරම්භ කරන්න කැමතිද?
   utter_slot_values:
   - text: |-
-      Here are your requirements.
-       - Style: {style}
-       - Medium: {medium}
-       - Num of figures: {figures}
+      මේ තියෙන්නේ ඔයාගේ අවශ්‍යතා.
+       - ශෛලිය: {style}
+       - මාධ්‍ය: {medium}
+       - මිනිස් රූප ගණන: {figures}
   utter_submit:
-  - text: Great! I will process the requirements and find an artist for you.
+  - text: විශිෂ්ටයි! මම මේ අවශ්‍යතා සලකලා ඔයාට චිත්‍ර ශිල්පියෙක් හොයල දෙන්නම්.
 actions:
 - utter_ask_artists
 - utter_figures

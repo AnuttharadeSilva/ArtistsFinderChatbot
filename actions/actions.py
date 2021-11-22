@@ -5,9 +5,9 @@ from rasa_sdk.events import EventType
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.types import DomainDict
 
-ALLOWED_STYLES = ["digital", "traditional", "cartoon", "realistic"]
-ALLOWED_MEDIUMS = ["colored", "line", "water color", "color pencil", "pencil", "oil color"]
-ALLOWED_FIGURES = ["one", "two", "three", "four", "1","2","3","4","couple","single","family"]
+ALLOWED_STYLES = ["ඩිජිටල්", "සම්ප්‍රදායික", "කාර්ටූන්", "තාත්වික"]
+ALLOWED_MEDIUMS = ["පාට කරපු", "රේඛා", "දිය සායම්", "පාට පැන්සල්", "පැන්සල්", "තෙල් සායම්"]
+ALLOWED_FIGURES = ["එක", "දෙක", "තුන", "හතර", "1","2","3","4","යුගල","තනි","පවුලේ"]
 
 class ValidateArtistForm(FormValidationAction):
     def name(self) -> Text:
@@ -23,9 +23,9 @@ class ValidateArtistForm(FormValidationAction):
         """Validate `style` value."""
 
         if slot_value.lower() not in ALLOWED_STYLES:
-            dispatcher.utter_message(text=f"We only provide styles: digital, traditional, cartoon, realistic")
+            dispatcher.utter_message(text=f"සමාවෙන්න. අපි සපයන්නේ මේ ශෛලීන් පමණයි. {'/'.join(ALLOWED_STYLES)}")
             return {"style": None}
-        dispatcher.utter_message(text=f"OK! You want to have a {slot_value} drawing.")
+        dispatcher.utter_message(text=f"හරි. ඔබට අවශ්‍ය චිත්‍ර ශෛලිය: {slot_value}.")
         return {"style": slot_value}
 
     def validate_medium(
@@ -38,9 +38,9 @@ class ValidateArtistForm(FormValidationAction):
         """Validate `medium` value."""
 
         if slot_value not in ALLOWED_MEDIUMS:
-            dispatcher.utter_message(text=f"I don't recognize that type. We provide {'/'.join(ALLOWED_MEDIUMS)}.")
+            dispatcher.utter_message(text=f"සමාවෙන්න. අපි සපයන්නේ මේ මාධ්‍යන් පමණයි. {'/'.join(ALLOWED_MEDIUMS)}.")
             return {"medium": None}
-        dispatcher.utter_message(text=f"OK! You want to have a {slot_value} drawing.")
+        dispatcher.utter_message(text=f"හරි. ඔබට අවශ්‍ය චිත්‍ර මාධ්‍ය:  {slot_value}.")
         return {"medium": slot_value}
 
     def validate_figures(
@@ -53,7 +53,7 @@ class ValidateArtistForm(FormValidationAction):
         """Validate `figures` value."""
 
         if slot_value not in ALLOWED_FIGURES:
-            dispatcher.utter_message(text=f"Sorry. We don't provide more than 4 figures.")
+            dispatcher.utter_message(text=f"සමාවෙන්න. උපරිම මිනිස් රූප ගණන 4යි.")
             return {"figures": None}
-        dispatcher.utter_message(text=f"OK! You want to have a {slot_value} figures/drawing.")
+        dispatcher.utter_message(text=f"හරි. ඔබට අවශ්‍ය මිනිස් රූප ගණන: {slot_value}.")
         return {"figures": slot_value}

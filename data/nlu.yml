@@ -2,144 +2,140 @@ version: "2.0"
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-    - Hello
+    - හෙලෝ
+    - හලෝ
+    - හායි
+    - ආයුබෝවන්
+    - සුබ උදෑසනක්
+    - සුබ සැන්දෑවක්
+    - සුබ උදෑසනක් වේවා
+    - සුබ සැන්දෑවක් වේවා
+    - හලෝ කොහොමද
+    - කොහොමද
+
 - intent: goodbye
   examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - ආයුබෝවන්
+    - බායි
+    - සුබ දවසක්
+    - සුබ රාත්‍රියක් වේවා
+    - ටටා
+    - සුබ රාත්‍රියක්
+    - ආයෙත් හම්බවෙමු
+    - සුබ දවසක් වේවා
+    - නැවත හමුවෙමු
+    - ගිහින් එන්නම්
+
 - intent: affirm
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-    - ok
-    - sure
+    - ඔව්
+    - හරි
+    - අනිවා
+    - අනිවාර්යෙන්
+    - ඒක හොදයි
+    - නිවැරදි
+    - ඔබ හරි
+    - නිවැරදියි
+    - ඔව් අහන්න
+    - ඕ
+
 - intent: deny
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-    - nope
+    - නෑ
+    - බෑ
+    - කවදාවත් නෑ
+    - කොහොමටවත් බෑ
+    - මන් හිතන්නේ නෑ
+    - මං ආස නෑ
+    - මං කැමති නෑ
+    - බෑ බෑ
+    - නෑ නේද
+    - අපෝ නෑ
+    - එපා
+    - මට එපා
+
 - intent: thank
   examples: |
-    - thank you
-    - thanks
-    - tnx
-    - ok thanks
-    - Thanks
+    - ස්තූතියි
+    - ගොඩක් ස්තූතියි
+    - බොහොම ස්තූතියි
+    - හරි ස්තූතියි
+
 - intent: mood_great
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - නියමයි
+    - මරු
+    - මරුනේ
+    - වාව්
+    - හොදටම හොදයි
+    - ගොඩක් හොදයි
+
 - intent: mood_unhappy
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - වැඩක් නෑ
+    - හරි නෑ
+    - දුකයි
+    - හරිම දුකයි
+
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - ඔයා කවුද?
+    - ඔයා මනුස්සයෙක්ද?
+    - ඔයා මිනිහෙක්ද?
+    - ඔයා රොබෝ කෙනෙක්ද?
+    - ඔයාගේ නම මොකක්ද?
+
 - intent: ask_artists
   examples: |
-    - Do you know any artists?
-    - Do you know about painters?
-    - How can I find a good artists?
-    - How to find an artist?
-    - Can you find me an artist?
-    - I want to find an artist
-    - I want a to get done a drawing
-    - How can I get my portrait done?
-    - How to buy a drawing of me?
-    - I want to buy a drawing
-    - I want to buy an art
-    - how can i find an artist?
+    - ඔයා චිත්‍ර ශිල්පියෙක්ව දන්නවද?
+    - ඔයා චිත්‍ර අදින අයව දන්නවද?
+    - මට චිත්‍රයක් ඇදගන්න ඕනේ
+    - මට චිත්‍රයක ඇදගන්න කෙනෙක්ව හොයල දෙන්න පුලුවන්ද?
+    - චිත්‍රයක කරගන්න තැනක් දන්නවද?
+    - මගේ චිත්‍රයක් ඇදගන්න ඕනේ
+    - මට චිත්‍රයක් මිලදී ගන්න ඕනේ
+    - මට චිත්‍රයක් ඇදගන්න අවශ්‍යයි
+    - කොහෙන්ද චිත්‍ර ශිල්පියෙක් හොයාගන්නේ?
+    - මගේ රුපයක් ඇදගන්න කෙනෙක් දන්නවද?
+    - මට මගේ රුපයක් ඇදගන්න ඕනේ.
+
 - intent: inform
   examples: |
-    - [digital](style) art
-    - [traditional](style) art
-    - I want a [cartoon](style) one
-    - [realistic](style) art
-    - I would like to get a [colored](medium) drawing
-    - [pencil](medium) art
-    - I need a [color pencil](medium) art
-    - [line](medium) art
-    - I want a [water color](medium) drawing
-    - [oil color](medium) art
-    - [one](figures) only
-    - [4](figures)
-    - [couple](figures) portrait
-    - [family](figures) drawing
-    - I want [digital](style) art
+    - [ඩිජිටල්](style) චිත්‍රයක්
+    - [සම්ප්‍රදායික](style) චිත්‍රයක්
+    - මට ඕනේ [කාර්ටූන්](style) එකක්
+    - [තාත්වික](style) චිත්‍රයක්
+    - මං කැමතියි [පාට කරපු](medium) චිත්‍රයකට
+    - [පැන්සල්](medium) චිත්‍රයක්
+    - [පැන්සලෙන්](medium) අදින චිත්‍රයක්
+    - මට ඕනේ [පාට පැන්සල්](medium) චිත්‍රයක්
+    - [රේඛා](medium) චිත්‍රයක්
+    - [රේඛා](medium) මාධ්‍ය චිත්‍රයක්
+    - මට අවශ්‍ය [දිය සායම්](medium) චිත්‍රයක්
+    - [තෙල් සායම්](medium) චිත්‍රයක්
+    - [එක](figures) රූපයක් විතරක්
+    - [4](figures) ක්
+    - [3](figures) යි
+    - [යුගල](figures) චිත්‍රයක්
+    - [පවුලේ](figures) චිත්‍රයක්
+    - මට [ඩිජිටල්](style) චිත්‍රයක් ඕනේ
     - [2](figures)
-    - I want a [digital](style) drawing
-    - [colored](medium) one
+    - මට ගන්න ඕනේ [ඩිජිටල්](style) ආකාරයේ චිත්‍රයක්
+    - මට ඕනේ [ඩිජිටල්](style) ශෛලියේ චිත්‍රයක්
+    - [පාට කරපු](medium) එකක්
     - [6](figures)
-    - [4](figures) figures then
-    - [3](figures) figures please
+    - එහෙනම් රූප [4](figures) ක්
+    - රූප [3](figures) ක් දෙන්නකෝ
     
 - intent: out_of_scope
   examples: |
-    - nevermind
-    - wait stop
-    - That is not what I wanted
-    - tell me the weather
-    - I want a pizza
-    - stop asking
-    - I want to do something else
-    - you are no help
-    - how old are you
+    - ඕනේ නෑ
+    - පොඩ්ඩක් ඉන්න
+    - නවතින්න
+    - මට ඕනේ උනේ ඒක නෙවෙයි
+    - වෙලාව කීයද
+    - මට පීසා එකක් ඕනේ
+    - දැන් ඇති
+    - මට එපා 
+    - ඔයාගෙන් වැඩක් නෑ
+    - ඔයාට වයස කීයද
