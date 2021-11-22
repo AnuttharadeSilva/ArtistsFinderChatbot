@@ -3,10 +3,13 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- inform_figures
+- ask_art_service
+- thank_you
+- inform_medium
+- inform_style
 - greet
 - thank
-- inform
-- ask_artists
 - goodbye
 - affirm
 - deny
@@ -31,7 +34,6 @@ slots:
   requested_slot:
     type: unfeaturized
     influence_conversation: false
-
 responses:
   utter_greet:
   - text: ආයුබෝවන්! මොකක්ද මගෙන් ඔබට විය යුතු උදව්ව?
@@ -46,16 +48,16 @@ responses:
   - text: සුබ දවසක්!
   utter_iamabot:
   - text: මම RASA වලින් හදපු රොබෝ කෙනෙක්.
-  utter_ask_artists:
+  utter_ask_art_service:
   - text: මම දන්නවා ලංකාවේ ඉන්න හොදම චිත්‍ර ශිල්පියෝ. ඔයාට එයාලට කියල චිත්‍රයක් මිලදී ගන්න පුළුවන්.
   utter_ask_style:
-  - text: මට දැනගන්න පුලුවන්ද ඔයාට අවශ්‍ය චිත්‍ර ශෛලිය මොකක්ද කියල?
+  - text: මට දැනගන්න පුලුවන්ද ඔයාට අවශ්‍ය චිත්‍ර ශෛලිය මොකක්ද කියල? සම්ප්‍රදායික ද ඩිජිටල් ද?
   utter_ask_medium:
-  - text: ඔයාට චිත්‍රය ඇදගන්න ඕනේ කරන මාධ්‍ය මොකක්ද? 
+  - text: ඔයාට චිත්‍රය ඇදගන්න ඕනේ කරන මාධ්‍ය මොකක්ද? වර්ණවත් එකක්ද රේඛා චිත්‍රයක් ද?
   utter_ask_figures:
   - text: ඔයාගේ චිත්‍රයේ මිනිස් රූප කීයක් තිබිය යුතුද?
   utter_no_worries:
-  - text: ඕක මොකක්ද :)
+  - text: සුළු දෙයක් :)
   utter_ask_continue:
   - text: සමාවෙන්න. මට ඒක තේරුනේ නෑ. නැවත ආරම්භ කරන්න කැමතිද?
   utter_slot_values:
@@ -67,7 +69,7 @@ responses:
   utter_submit:
   - text: විශිෂ්ටයි! මම මේ අවශ්‍යතා සලකලා ඔයාට චිත්‍ර ශිල්පියෙක් හොයල දෙන්නම්.
 actions:
-- utter_ask_artists
+- utter_ask_art_service
 - utter_figures
 - utter_goodbye
 - utter_greet
@@ -76,7 +78,6 @@ actions:
 - utter_slot_values
 - utter_style
 - utter_submit
-- validate_artist_form
 forms:
   artist_form:
     required_slots:

@@ -14,7 +14,7 @@ rules:
 
 - rule: Activate Artist Form
   steps:
-  - intent: ask_artists
+  - intent: ask_art_service
   - action: artist_form
   - active_loop: artist_form
 

@@ -28,3 +28,42 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: ask service path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_art_service
+  - action: artist_form
+  - active_loop: artist_form
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_art_service
+  - action: artist_form
+  - active_loop: artist_form
+  - slot_was_set:
+    - requested_slot: style
+  - slot_was_set:
+    - style: ඩිජිටල්
+  - slot_was_set:
+    - style: ඩිජිටල්
+  - slot_was_set:
+    - requested_slot: medium
+  - slot_was_set:
+    - medium: වර්ණවත්
+  - slot_was_set:
+    - medium: වර්ණවත්
+  - slot_was_set:
+    - requested_slot: figures
+  - slot_was_set:
+    - figures: '2'
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_slot_values
+  - intent: thank_you
+  - action: utter_no_worries
