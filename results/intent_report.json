@@ -6,7 +6,7 @@
     "support": 7,
     "confused_with": {}
   },
-  "ask_art_service": {
+  "service": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
