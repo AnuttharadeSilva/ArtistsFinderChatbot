@@ -23,21 +23,27 @@ The important files and directories of the repository
 
 ## Getting started
 
+Run these commands in seperate terminals/command promts:
+
+To initiate the project & run rasa server
+
 ```commandline
 pip install rasa
-
 python3 -m venv ./venv
-
 .\venv\Scripts\activate
-
 git clone https://github.com/AnuttharadeSilva/ArtworkBookingChatbot-Sinhala
- 
 cd ArtworkBookingChatbot-Sinhala
+rasa run --enable-api -cors "*" ```
 
-rasa run --enable-api -cors "*"
+To run action server
 
 ```commandline
-python -m http.server
+rasa run actions ```
+
+To run web api
+
+```commandline
+python -m http.server ```
 
 Navigate to http://localhost:8000/
 
