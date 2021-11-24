@@ -14,8 +14,9 @@ rules:
 
 - rule: Activate Artist Form
   steps:
-  - intent: ask_art_service
-  - action: utter_ask_art_service
+  - intent: service
+  - action: utter_service
+  - action: action_reset_all_slots
   - action: artist_form
   - active_loop: artist_form
 
@@ -23,13 +24,14 @@ rules:
   condition:
   - active_loop: artist_form
   steps:
-  - action: utter_ask_art_service
   - action: artist_form
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
-  - action: utter_submit
+  - action: action_calculate_price
   - action: utter_slot_values
+  - action: utter_submit
+
 
 - rule: Provide website info
   steps:
@@ -38,7 +40,13 @@ rules:
 
 - rule: Out of scope
   steps:
-  - intent: out_of_scope
-  - action: utter_ask_continue
+  - intent: nlu_fallback
+  - action: utter_out_of_scope
+
+- rule: Thank you
+  steps:
+  - intent: thank_you
+  - action: utter_no_worries
+
 
 

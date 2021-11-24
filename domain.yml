@@ -4,37 +4,35 @@ config:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
 intents:
 - inform_figures:
     use_entities: true
-- ask_art_service:
-    use_entities: true
-- thank_you:
-    use_entities: true
+- service
+- thank_you
 - inform_medium:
     use_entities: true
 - inform_style:
     use_entities: true
-- greet:
-    use_entities: true
-- goodbye:
-    use_entities: true
-- bot_challenge:
-    use_entities: true
-- out_of_scope:
-    use_entities: true
+- greet
+- goodbye
+- bot_challenge
+- out_of_scope
 - inform_background:
     use_entities: true
 - inform_email:
     use_entities: true
-- ask_samples:
-    use_entities: true
+- ask_samples
+- nlu_fallback
+
 entities:
 - figures
 - medium
 - style
 - background
 - email
+- price
+
 slots:
   style:
     type: text
@@ -51,24 +49,22 @@ slots:
   email:
     type: text
     influence_conversation: true
-  # requested_slot:
-  #   type: rasa.shared.core.slots.UnfeaturizedSlot
-  #   initial_value: null
-  #   auto_fill: true
-  #   influence_conversation: false
+  price:
+    type: text
+    influence_conversation: true
+  requested_slot:
+    type: text
+    influence_conversation: false
+
 responses:
   utter_greet:
   - text: ආයුබෝවන්! මම තමයි මේ චිත්‍ර ශිල්පියාගේ රොබෝ නියෝජිත :) ඔබට අවශ්‍ය සේවාව කුමක්ද?
-  utter_did_that_help:
-  - text: ඒක ඔයාට උදව්වක් උනාද?
-  utter_happy:
-  - text: නියමයි! දිගටම කරගෙන යන්න
   utter_goodbye:
   - text: සුබ දවසක්!
   utter_iamabot:
   - text: මම RASA වලින් හදපු රොබෝ කෙනෙක්. මම තමයි මේ චිත්‍ර ශිල්පියාගේ රොබෝ නියෝජිත :)
-  utter_ask_art_service:
-  - text: ඔව් ඔබට අපෙන් චිත්‍රයක් මිලදී ගන්න පුළුවන්. මුලින්ම ඔබගේ අවශ්‍යතා ගැන මට දැනගැනීමට අවශ්‍යයි.
+  utter_service:
+  - text: ඔබට අපෙන් චිත්‍රයක් මිලදී ගන්න පුළුවන් :) මුලින්ම ඔබගේ අවශ්‍යතා ගැන මට දැනගැනීමට අවශ්‍යයි.
   utter_ask_medium:
   - text: ඔබට චිත්‍රය අවශ්‍ය ඩිජිටල්(Digital) මාධ්‍යයෙන්ද? සම්ප්‍රධායික(Traditional) මාධ්‍යයෙන්ද?
   utter_ask_style:
@@ -83,8 +79,8 @@ responses:
   - text: සුළු දෙයක් :)
   - text: එය මගේ රාජකාරිය.
   - text: ඔබ සමග කතා කිරීමට ලැබීම ගැන සතුටුයි.
-  utter_ask_continue:
-  - text: සමාවෙන්න. මට ඒක වැටහුනේ නෑ. නැවත ආරම්භ කරන්න කැමතිද?
+  utter_out_of_scope:
+  - text: සමාවෙන්න. මට ඒක වැටහුනේ නෑ. කරුණාකර නැවත ප්‍රශ්නය/අදහස යොමු කරන්න.
   utter_slot_values:
   - text: |-
       - මාධ්‍ය: {medium}
@@ -92,12 +88,14 @@ responses:
       - මිනිස් රූප ගණන: {figures}
       - පසුබිම: {background}
       - Email address: {email}
+      - මිල: රු.{price}
   utter_submit:
   - text: ස්තුතියි! ඔබගේ ඇනවුම සම්පූරණයි. ගෙවීම් කටයුතු හා අනෙකුත් තොරතුරු සදහා කරුණාකර ඔබගේ emails පරික්ෂා කරන්න.
   utter_ask_samples:
   - text: පෙර නිර්මාණ දැකගැනීම සදහා කරුණාකර පහත වෙබ් අඩවියට පිවිසෙන්න. (www.websiteoftheartist.lk)
+
 actions:
-- utter_ask_art_service
+- utter_service
 - utter_figures
 - utter_goodbye
 - utter_greet
@@ -106,6 +104,9 @@ actions:
 - utter_slot_values
 - utter_style
 - utter_submit
+- action_reset_all_slots
+- action_calculate_price
+
 forms:
   artist_form:
     required_slots:
@@ -124,3 +125,4 @@ forms:
       email:
       - entity: email
         type: from_entity
+

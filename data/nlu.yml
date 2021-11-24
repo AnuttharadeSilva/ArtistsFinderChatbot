@@ -76,7 +76,8 @@ nlu:
     - බොහොම ස්තුතියි
     - ස්තුති
     - ස්තූති
-    - සතතයසතතය
+    - Ok thanks
+    - ඕකේ තෑන්ක්ස්
 # - intent: mood_great
 #   examples: |
 #     - නියමයි
@@ -101,7 +102,7 @@ nlu:
     - මේ මොකක්ද
     - ඔයා මොකෙක්ද
     
-- intent: ask_art_service
+- intent: service
   examples: |
     - මට චිත්‍රයක් ඇදගන්න ඕනේ
     - මගේ චිත්‍රයක් ඇදගන්න ඕනේ
@@ -126,6 +127,12 @@ nlu:
     - මේ දවස්වල orders ගන්නවද?
     - මේ දවස්වල ඇනවුම් ගන්නවද?
     - මේ දවස්වල commissions කරන්වද?
+    - චිත්‍රයක් කියක් වෙනවද?
+    - ඔයා චිත්‍රයක් අදින්න කියක් ගන්නවද
+    - price කොහොමද?
+    - price please?
+    - චිත්‍රයක මිල කියද
+    - ආර්ට් එකක් ඇදගන්න ගණන් කොහොමද?
 
 - intent: inform_medium
   examples: |
@@ -142,10 +149,14 @@ nlu:
     - [සම්ප්‍රදායික](medium) චිත්‍රයක් ඇදගන්න පුලුවන්ද?
     - [ඩිජිටල්](medium) එකක්
     - [සම්ප්‍රදායික](medium) එකක්
+    - [සම්ප්‍රධායික](medium) එකක්
     - [Digital](medium) චිත්‍රයක් ඇදගන්න පුලුවන්ද?
     - [Traditional](medium) චිත්‍රයක් ඇදගන්න පුලුවන්ද?
     - [Digital](medium) එකක්
     - [Traditional](medium) එකක්
+    - [ඩිජිටල්](medium) මාධ්‍යයෙන්
+    - [සම්ප්‍රදායික](medium) මාධ්‍යයෙන්
+    - [සම්ප්‍රධායික](medium) මාධ්‍යයෙන්
 
 - intent: inform_style
   examples: |
@@ -184,6 +195,7 @@ nlu:
     - [හතරක්](figures)
     - [එකයි](figures)
     - [2](figures) ක්
+    - මිනිස් රූප [2](figures) ක්
 
 - intent: inform_background
   examples: |
@@ -198,15 +210,23 @@ nlu:
     - පසුබිමක් [ඕනේ](background)
     - [අවශ්‍යයි](background)
     - අවශ්‍ය [නෑ](background)
-    - [හා](background)  
+    - [හා](background)
+    - [ඕ](background)
+    - [yes](background)
+    - [no](background)      
 
 - intent: inform_email
   examples: |
     - මගේ email address එක [abc@gmail.com](email)
     - email එක [abc@gmail.com](email) 
     - [abc@gmail.com](email) 
-    - මගේ email එක [abc@gmail.com](email)
+    - මගේ email එක [abc@yahoo.com](email)
     - හරි. [abc@gmail.com](email)
+    - මගේ email address එක [abc12@gmail.com](email)
+    - email එක [anutthara@gmail.com](email) 
+    - [abc@hotmail.com](email) 
+    - මගේ email එක [abc12@yahoo.com](email)
+    - හරි. [dilini@gmail.com](email)
 
 - intent: ask_samples
   examples: |
@@ -229,3 +249,21 @@ nlu:
     - දැන් ඇති
     - ඔයාගෙන් වැඩක් නෑ
     - ඔයාට වයස කීයද
+
+- lookup: medium
+  examples: |
+    - ඩිජිටල්
+    - සම්ප්‍රදායික
+    - සම්ප්‍රධායික
+    - Digital
+    - Traditional
+
+- lookup: style
+  examples: |
+    - රේඛා
+    - රේකා
+    - වර්ණවත්
+    - වර්නවත්
+    - Line art
+    - Colored
+

@@ -13,8 +13,9 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: ask_art_service
-  - action: utter_ask_art_service
+  - intent: service
+  - action: utter_service
+  - action: action_reset_all_slots
   - action: artist_form
   - active_loop: artist_form
 
