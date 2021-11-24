@@ -1,0 +1,26 @@
+[
+  {
+    "text": "ආයුබෝවන්",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.572013795375824
+    }
+  },
+  {
+    "text": "ඕනේ නෑ",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.5305786728858948
+    }
+  },
+  {
+    "text": "මට එපා",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.6463309526443481
+    }
+  }
+]

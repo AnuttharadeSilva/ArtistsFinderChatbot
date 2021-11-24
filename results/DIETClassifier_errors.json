@@ -1,0 +1,39 @@
+[
+  {
+    "text": "ඔව් ඕනේ",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "ඔව්",
+        "entity": "background"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "background",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.9983069896697998,
+        "value": "ඔව්",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "background",
+        "start": 4,
+        "end": 7,
+        "confidence_entity": 0.6136253476142883,
+        "value": "ඕනේ",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "background",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.7660193097678657,
+        "value": "ඔව්",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "medium": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 17,
+    "confused_with": {}
+  },
+  "email": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "background": {
+    "precision": 0.9230769230769231,
+    "recall": 1.0,
+    "f1-score": 0.9600000000000001,
+    "support": 12,
+    "confused_with": {}
+  },
+  "figures": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 15,
+    "confused_with": {}
+  },
+  "style": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 18,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.9852941176470589,
+    "recall": 1.0,
+    "f1-score": 0.9925925925925926,
+    "support": 67
+  },
+  "macro avg": {
+    "precision": 0.9846153846153847,
+    "recall": 1.0,
+    "f1-score": 0.992,
+    "support": 67
+  },
+  "weighted avg": {
+    "precision": 0.9862227324913893,
+    "recall": 1.0,
+    "f1-score": 0.9928358208955226,
+    "support": 67
+  }
+}

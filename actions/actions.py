@@ -5,7 +5,7 @@
 # from rasa_sdk.executor import CollectingDispatcher
 # from rasa_sdk.types import DomainDict
 
-# ALLOWED_STYLES = ["ඩිජිටල්", "සම්ප්‍රදායික"]
+# ALLOWED_mediumS = ["ඩිජිටල්", "සම්ප්‍රදායික"]
 # ALLOWED_MEDIUMS = ["වර්ණවත්", "රේඛා"]
 # # ALLOWED_FIGURES = ["එක", "දෙක", "තුන", "හතර", "1","2","3","4","යුගල","තනි","පවුලේ"]
 
@@ -13,20 +13,20 @@
 #     def name(self) -> Text:
 #         return "validate_artist_form"
 
-#     def validate_style(
+#     def validate_medium(
 #         self,
 #         slot_value: Any,
 #         dispatcher: CollectingDispatcher,
 #         tracker: Tracker,
 #         domain: DomainDict,
 #     ) -> Dict[Text, Any]:
-#         """Validate `style` value."""
+#         """Validate `medium` value."""
 
-#         if slot_value.lower() not in ALLOWED_STYLES:
-#             dispatcher.utter_message(text=f"සමාවෙන්න. අපි සපයන්නේ මේ ශෛලීන් පමණයි. {'/'.join(ALLOWED_STYLES)}")
-#             return {"style": None}
+#         if slot_value.lower() not in ALLOWED_mediumS:
+#             dispatcher.utter_message(text=f"සමාවෙන්න. අපි සපයන්නේ මේ ශෛලීන් පමණයි. {'/'.join(ALLOWED_mediumS)}")
+#             return {"medium": None}
 #         dispatcher.utter_message(text=f"හරි. ඔබට අවශ්‍ය චිත්‍ර ශෛලිය: {slot_value}.")
-#         return {"style": slot_value}
+#         return {"medium": slot_value}
 
 #     def validate_medium(
 #         self,
