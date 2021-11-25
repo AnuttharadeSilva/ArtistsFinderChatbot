@@ -33,17 +33,20 @@ python3 -m venv ./venv
 .\venv\Scripts\activate
 git clone https://github.com/AnuttharadeSilva/ArtworkBookingChatbot-Sinhala
 cd ArtworkBookingChatbot-Sinhala
-rasa run --enable-api -cors "*" ```
+rasa run --enable-api -cors "*" 
+```
 
 To run action server
 
 ```commandline
-rasa run actions ```
+rasa run actions 
+```
 
 To run web api
 
 ```commandline
-python -m http.server ```
+python -m http.server 
+```
 
 Navigate to http://localhost:8000/
 
