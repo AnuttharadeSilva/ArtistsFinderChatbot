@@ -40,7 +40,7 @@ rules:
 
 - rule: Out of scope
   steps:
-  - intent: nlu_fallback
+  - intent: out_of_scope
   - action: utter_out_of_scope
 
 - rule: Thank you
