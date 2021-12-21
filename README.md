@@ -20,6 +20,15 @@ The important files and directories of the repository
     ├── config.yml : model configurations
     ├── endpoints.yml : action server endpoint
     ├── credentials.yml
+    ├── index.html : chatbot api interface
+
+## Dataset properties
+
+Intents:
+- service, inform_medium, inform_style, inform_figures, inform_background, inform_email, ask_samples, out_of_scope, greet, thank_you, goodbye, bot_challenge
+
+Stories:
+- ask service path, ask samples path
 
 ## Getting started
 
